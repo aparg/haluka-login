@@ -1,7 +1,7 @@
 import React from "react";
 import {Component} from 'react';
-import Background from '../components/Background/Background.jsx'
-import DataEntryBox from '../components/DataEntryBox/DataEntryBox.jsx'
+import Background from '../Background/Background.jsx'
+import DataEntryBox from '../../components/DataEntryBox/DataEntryBox.jsx'
 
 class Layout extends Component{
     state={
@@ -10,8 +10,9 @@ class Layout extends Component{
 
     render(){
         return (<React.Fragment>
-            <Background/>
-            {/* <DataEntryBox/> */}
+            <Background>
+                <DataEntryBox/>
+            </Background>
         </React.Fragment>)
     }
 }
