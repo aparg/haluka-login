@@ -1,0 +1,6 @@
+.Back{
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-image: linear-gradient(to top right,#8084fc,#78d0fc);
+}
