@@ -8,7 +8,7 @@ const FormElement = (props)=>{
             inputElement = <input className={FormElementStyle.Input} onChange={props.changes} {...props.elementConfig} />
             break;
         case "button":
-            inputElement = <button className={FormElementStyle.Button} type="button">{props.elementConfig.placeholder}</button>
+            inputElement = <button className={FormElementStyle.Button} type="button" onClick={props.buttonClicked}>{props.elementConfig.placeholder}</button>
             break;
         default:
             inputElement = <input className={FormElementStyle.Input} onChange={props.changes} {...props.elementConfig}/>

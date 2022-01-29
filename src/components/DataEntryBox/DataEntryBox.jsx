@@ -5,10 +5,10 @@ import FormElement from '../FormElement/FormElement'
 class DataEntryBox extends Component{
     state={
         orderForm:[{
-                    inputtype: "input",
+                    inputtype:"input",
                     elementConfig:{
                         type: "text",
-                        placeholder: "Email address or Username",
+                        placeholder:"Email address or Username",
                     },
                     value:""
                 },
@@ -24,8 +24,8 @@ class DataEntryBox extends Component{
                     inputtype:"button",
                     elementConfig:{
                         type:"button",
-                        placeholder:"Punch it!"
-                    }
+                        placeholder:"Punch it!",
+                    },
                 }]
             
         
@@ -36,13 +36,19 @@ class DataEntryBox extends Component{
         newOrderForm[index].value=ev.target.value;
         this.setState({orderForm:newOrderForm})
     }
+
+    clicked(){
+        console.log("Button clicked")
+        //Code to execute after button click
+    }
+
     render(){
         return (
             <div className={DataEntryBoxStyle.Box}>
                 <div className={DataEntryBoxStyle.title}>BELT LOGIN</div>
                 <div className={DataEntryBoxStyle.signin}>Sign In</div>
                 <form className={DataEntryBoxStyle.form}>
-                    {this.state.orderForm.map((el,ind)=><FormElement key={el.elementConfig.placeholder} inputtype={el.inputtype} elementConfig={el.elementConfig} changes={(event)=>this.changeVal(event,ind)}/>)}
+                    {this.state.orderForm.map((el,ind)=><FormElement key={el.elementConfig.placeholder} inputtype={el.inputtype} elementConfig={el.elementConfig} changes={(event)=>this.changeVal(event,ind)} buttonClicked={this.clicked}/>)}
                 </form>
                 <span className={DataEntryBoxStyle.forgot}>Forgot email/username or password?<a href="./">Click here!</a></span>
                 <div className={DataEntryBoxStyle.line}></div>
