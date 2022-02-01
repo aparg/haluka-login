@@ -8,10 +8,13 @@
     font-size: 110%;
     padding: 4%;
     font-family: 'Open Sans', sans-serif;
+    border: none;
 }
 
 .Input:focus::-webkit-input-placeholder{
-    color:rgb(199, 199, 199)
+    color:rgb(199, 199, 199);
+    outline:none;
+    border: none;
 }
 
 .Button{
@@ -23,4 +26,8 @@
 
 .Button:hover{
     cursor:pointer;
+}
+
+.Input{
+    background-color: rgb(246, 246, 246);
 }
